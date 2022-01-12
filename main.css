@@ -1,0 +1,182 @@
+.name {
+    text-align: center;
+    font-family: "sofia", "sans-serif";
+    font-size: 300%;
+    color: white;
+    background-color: rgb(124, 124, 124);
+    color: rgb(203, 255, 203);
+}
+
+#menu {
+    list-style: none;
+    text-align: center;
+    font-size: 200%;
+    box-shadow: 10px 10px 5px gray;
+    font-family: italic;
+    background-color: white;
+    border-radius: 5px;
+    position: fixed;
+    width: 40%;
+    right: 30%;
+    display: block;
+    padding: 20px;
+    /* list-style: none;
+    text-align: center;
+    font-size: 200%;
+    box-shadow: 10px 10px 5px gray;
+    font-family: italic;
+    background-color: white;
+    border-radius: 5px;
+    position: fixed;
+    width: 40%;
+    right: 30%;
+    display: block;
+    left: 57vh;
+    padding: 20px; */
+}
+
+#menu img {
+    height: 100px;
+    padding: 2vh;
+    margin-top: 3vh;
+    margin-bottom: 1vh;
+}
+
+#menu li:hover {
+    cursor: pointer;
+}
+
+#score {
+    list-style: none;
+    text-align: center;
+    font-size: 200%;
+    box-shadow: 10px 10px 5px gray;
+    font-family: italic;
+    background-color: white;
+    border-radius: 5px;
+    position: fixed;
+    width: 40%;
+    right: 30%;
+    display: block;
+    padding: 20px;
+}
+
+#score li {
+    margin: 2px;
+}
+
+#close {
+    font-size: 200%;
+    margin-left: 20%;
+    margin-right: 20%;
+    color: black;
+    border: 2px Red solid;
+    background-color: rgb(255, 153, 153);
+    transition: 200ms;
+}
+
+#close:hover {
+    cursor: pointer;
+    font-size: 210%;
+}
+
+#backg {
+    display: block;
+    position: fixed;
+    top: 0px;
+    left: 0px;
+    height: 150%;
+    width: 150%;
+    background-color: rgba(0, 0, 0, 0.377);
+    backdrop-filter: blur(3px);
+}
+
+#msg {
+    text-align: center;
+    font-style: italic;
+    font-size: 300%;
+    color: white;
+    background-color: rgb(201, 255, 188);
+    color: rgb(56, 56, 56);
+    margin: auto;
+    width: 60vh;
+}
+
+table {
+    /* height: 50vh;
+    width: 50vh; */
+    margin: auto;
+}
+
+table:hover {
+    cursor: pointer;
+}
+
+table td {
+    width: 20vh;
+    height: 20vh;
+    margin: 0px black;
+    text-align: center;
+    border: 3vh red solid;
+    font: 700% bold;
+    font-family: "Audiowide", sans-serif;
+    transition: 150ms;
+}
+
+td:hover {
+    border: black dashed;
+    font: 750% bold;
+    position: relative;
+    transition: 150ms;
+    font-family: "Audiowide", sans-serif;
+}
+
+@media only screen and (max-width:868px) {
+    #msg {
+        text-align: center;
+        font-style: italic;
+        font-size: 200%;
+        color: white;
+        background-color: rgb(201, 255, 188);
+        color: rgb(56, 56, 56);
+        margin: auto;
+        width: 60vh;
+    }
+    #result {
+        background-color: yellowgreen;
+        color: blue;
+    }
+    #close {
+        font-size: 100%;
+        margin-left: 10%;
+        margin-right: 10%;
+    }
+    #close:hover {
+        font-size: 120%;
+        margin-left: 10%;
+        margin-right: 10%;
+    }
+    #score {
+        list-style: none;
+        text-align: center;
+        font-size: 250%;
+        width: 40%;
+        left: 20%;
+        display: block;
+        /* left: 37vh; */
+    }
+    #menu {
+        font-size: 150%;
+        /* top: 15vh; */
+        width: 45%;
+        left: 15%;
+        display: block;
+        padding: 20px;
+    }
+    #menu img {
+        height: 8vh;
+        padding: 3vh;
+        margin-top: 3vh;
+        margin-bottom: 1vh;
+    }
+}
