@@ -1,3 +1,9 @@
+body {
+    margin: none;
+    padding: none;
+    overflow: hidden;
+}
+
 .name {
     text-align: center;
     font-family: "sofia", "sans-serif";
@@ -118,14 +124,14 @@ table td {
     margin: 0px black;
     text-align: center;
     border: 3vh red solid;
-    font: 700% bold;
+    font: 500% bold;
     font-family: "Audiowide", sans-serif;
     transition: 150ms;
 }
 
 td:hover {
     border: black dashed;
-    font: 750% bold;
+    font: 550% bold;
     position: relative;
     transition: 150ms;
     font-family: "Audiowide", sans-serif;
@@ -159,7 +165,7 @@ td:hover {
     #score {
         list-style: none;
         text-align: center;
-        font-size: 250%;
+        font-size: 200%;
         width: 40%;
         left: 20%;
         display: block;
