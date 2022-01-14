@@ -97,6 +97,11 @@ function show_menu() {
 
 }
 
+
+function cellCall() {
+    document.getElementsByTagName('td').setAttribute("style", "border: black dashed;font: 510% bold;transition: 150ms")
+}
+
 function show_score() {
     document.getElementById('rounds').innerHTML = "Rounds : " + rounds
     document.getElementById('p1').innerHTML = "Player O : " + p1

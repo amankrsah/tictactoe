@@ -107,12 +107,12 @@ body {
     background-color: rgb(201, 255, 188);
     color: rgb(56, 56, 56);
     margin: auto;
+    /* position: relative;
+    bottom: 0vh; */
     width: 60vh;
 }
 
 table {
-    /* height: 50vh;
-    width: 50vh; */
     margin: auto;
 }
 
@@ -131,13 +131,12 @@ table td {
     transition: 150ms;
 }
 
-td:hover {
+
+/* td:hover {
     border: black dashed;
-    font: 550% bold;
-    position: relative;
+    font: 510% bold;
     transition: 150ms;
-    font-family: "Audiowide", sans-serif;
-}
+} */
 
 @media only screen and (max-width:868px) {
     #msg {
