@@ -22,7 +22,6 @@ function defaultValues() {
     for (let i = 0; i <= 8; i++) {
         str = str + i
         arr[i] = 'i'
-            // console.log(turn)
         document.getElementById(str).innerHTML = ""
         str = "c"
     }
