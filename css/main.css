@@ -2,6 +2,12 @@ body {
     margin: none;
     padding: none;
     overflow: hidden;
+    background-color: aqua;
+}
+
+.canvas {
+    position: relative;
+    bottom: 2vh;
 }
 
 .name {
@@ -13,6 +19,20 @@ body {
     color: rgb(203, 255, 203);
 }
 
+#timer {
+    position: fixed;
+    top: 10vh;
+    right: 2vh;
+    background-color: red;
+    color: white;
+    width: 80px;
+    font-size: 400%;
+    text-align: center;
+    height: 80px;
+    border: 2px white solid;
+    border-radius: 50px;
+}
+
 #menu {
     list-style: none;
     text-align: center;
@@ -22,7 +42,7 @@ body {
     background-color: white;
     border-radius: 5px;
     position: fixed;
-    width: 40%;
+    width: 50%;
     right: 30%;
     display: block;
     padding: 20px;
@@ -43,7 +63,7 @@ body {
 }
 
 #menu img {
-    height: 100px;
+    width: 100px;
     padding: 2vh;
     margin-top: 3vh;
     margin-bottom: 1vh;
@@ -131,6 +151,11 @@ table td {
     transition: 150ms;
 }
 
+#result {
+    color: rgb(241, 129, 0);
+    background-color: rgb(203, 255, 203);
+}
+
 
 /* td:hover {
     border: black dashed;
@@ -139,6 +164,14 @@ table td {
 } */
 
 @media only screen and (max-width:868px) {
+    #timer {
+        top: 1.5vh;
+        width: 50px;
+        height: 50px;
+        font-size: 250%;
+        text-align: center;
+        border-radius: 50px;
+    }
     #msg {
         text-align: center;
         font-style: italic;
@@ -149,8 +182,10 @@ table td {
         margin: auto;
         width: 60vh;
     }
+    table td {
+        border: 2vh red solid;
+    }
     #result {
-        background-color: yellowgreen;
         color: blue;
     }
     #close {
@@ -181,9 +216,9 @@ table td {
         padding: 20px;
     }
     #menu img {
-        height: 8vh;
+        height: 15vh;
         padding: 3vh;
         margin-top: 3vh;
-        margin-bottom: 1vh;
+        margin-bottom: 0.5vh;
     }
 }

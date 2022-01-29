@@ -10,51 +10,53 @@
     <title>Tic Tac Toe</title>
 </head>
 
-<h1 class="name">
-    Tic Tac Toe
-</h1>
 
 <body onload=defaultValues()>
-    <div id="backg"></div>
+    <div class="canvas">
+        <h1 class="name">
+            Tic Tac Toe
+        </h1>
+        <div id="timer">10</div>
+        <div id="backg"></div>
 
 
-    <ul id="menu">
-        <li id="result"></li>
-        <li onclick="defaultValues()"><img src="icons/Retry.svg" alt="" srcset=""><br>Play again</li>
-        <li onclick="show_score()"><img src="icons/menu.svg" alt="" srcset=""><br>Scoreboard</li>
-    </ul>
+        <ul id="menu">
+            <li id="result"></li>
+            <li onclick="defaultValues()"><img src="assets/Retry.svg" alt="" srcset=""><br>Play</li>
+            <li onclick="show_score()"><img src="assets//menu.svg" alt="" srcset=""><br>Scoreboard</li>
+        </ul>
 
-    <ul onclick="close_score()" id="score">
-        <li id="rounds" style="background-color: rgb(49, 49, 49); color: cornsilk;">Rounds : 0</li>
-        <li id="p1" style="background-color: rgb(255, 206, 187);color: red;">Player O : 0</li>
-        <li id="p2" style="background-color: rgb(201, 255, 188);color: green;">Player X : 0</li>
-        <li id="tie" style="background-color: rgb(255, 218, 139);color: rgb(241, 129, 0)">Tie : 0</li>
-        <li id="close">CLOSE</li>
-    </ul>
+        <ul onclick="close_score()" id="score">
+            <li id="rounds" style="background-color: rgb(49, 49, 49); color: cornsilk;">Rounds : 0</li>
+            <li id="p1" style="background-color: rgb(255, 206, 187);color: red;">Player O : 0</li>
+            <li id="p2" style="background-color: rgb(201, 255, 188);color: green;">Player X : 0</li>
+            <li id="tie" style="background-color: rgb(255, 218, 139);color: rgb(241, 129, 0)">Tie : 0</li>
+            <li id="close">CLOSE</li>
+        </ul>
 
-    <div id="msg" onclick="close()">Turn : Player X</div>
+        <div id="msg" onclick="close()">Turn : Player X</div>
 
 
-    <table>
-        <tr>
-            <td id="c0" onclick="takeInput(0)" style="border-left: none; border-top: none"></td>
-            <td id="c1" onclick="takeInput(1)" style="border-top: none"></td>
-            <td id="c2" onclick="takeInput(2)" style="border-top: none;border-right: none"></td>
-        </tr>
-        <br>
-        <tr>
-            <td id="c3" onclick="takeInput(3)" style="border-left: none;"></td>
-            <td id="c4" onclick="takeInput(4)"></td>
-            <td id="c5" onclick="takeInput(5)" style="border-right: none;"></td>
-        </tr>
-        <br>
-        <tr>
-            <td id="c6" onclick="takeInput(6)" style="border-left: none; border-bottom: none"></td>
-            <td id="c7" onclick="takeInput(7)" style="border-bottom: none"></td>
-            <td id="c8" onclick="takeInput(8)" style="border-right: none; border-bottom: none"></td>
-        </tr>
-    </table>
-
+        <table>
+            <tr>
+                <td id="c0" onclick="takeInput(0)" style="border-left: none; border-top: none"></td>
+                <td id="c1" onclick="takeInput(1)" style="border-top: none"></td>
+                <td id="c2" onclick="takeInput(2)" style="border-top: none;border-right: none"></td>
+            </tr>
+            <br>
+            <tr>
+                <td id="c3" onclick="takeInput(3)" style="border-left: none;"></td>
+                <td id="c4" onclick="takeInput(4)"></td>
+                <td id="c5" onclick="takeInput(5)" style="border-right: none;"></td>
+            </tr>
+            <br>
+            <tr>
+                <td id="c6" onclick="takeInput(6)" style="border-left: none; border-bottom: none"></td>
+                <td id="c7" onclick="takeInput(7)" style="border-bottom: none"></td>
+                <td id="c8" onclick="takeInput(8)" style="border-right: none; border-bottom: none"></td>
+            </tr>
+        </table>
+    </div>
 
     <script src="js/main.js"></script>
 </body>

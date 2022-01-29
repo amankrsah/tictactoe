@@ -1,12 +1,55 @@
 var arr = new Array('1', '2', '3', '4', '5', '6', '7', '8', '9')
-var turn = 0,
+var turn = Math.floor(Math.random() * 2),
     p1 = 0,
     p2 = 0,
     tie = 0,
     count = 0,
     rounds = 0,
     win = 'n',
-    str = "c"
+    str = "c",
+    tval = 10,
+    timer = tval,
+    sh_menu = true,
+    updateScore = true,
+    runtimer = true
+
+
+// Audio files
+audioLess = new Audio('assets/Less_than_5.wav')
+audioWrong = new Audio('assets/wrong_Move.wav')
+audioRight = new Audio('assets/right_Move.wav')
+audioRound = new Audio('assets/round_Cmplt.wav')
+
+
+// TO implement Timer
+setInterval(() => {
+    document.getElementById("timer").innerHTML = timer
+    if (runtimer) {
+        timer--
+    }
+    if (timer <= 0) {
+        if (turn % 2 == 0) {
+            scoreboard('O')
+            document.getElementById('result').innerHTML = "Player O Won the game...!<br>Timeout Method"
+            rounds++
+            updateScore = false
+        } else {
+            scoreboard('X')
+            document.getElementById('result').innerHTML = "Player X Won the game...!<br>Timeout Method"
+            rounds++
+            updateScore = false
+        }
+        sh_menu = true
+        defaultValues()
+        timer = tval
+    }
+    if ((timer < 5) && (timer >= 0)) {
+        audioLess.play()
+    } else {
+        audioLess.pause()
+        audioLess.currentTime = 0
+    }
+}, 1000)
 
 // To clear all the inputs
 function defaultValues() {
@@ -18,14 +61,19 @@ function defaultValues() {
     }
     str = "c"
     count = 0
-    console.log('Funciton invoked')
     for (let i = 0; i <= 8; i++) {
         str = str + i
         arr[i] = 'i'
         document.getElementById(str).innerHTML = ""
         str = "c"
     }
+    timer = tval
     close_all()
+    if (sh_menu) {
+        show_menu()
+        sh_menu = false
+    }
+
 }
 
 function scoreboard(w) {
@@ -42,6 +90,10 @@ function scoreboard(w) {
 
 }
 
+//To print Msg
+
+
+
 // To take inputs
 function takeInput(position) {
     if (turn % 2 == 0) {
@@ -55,17 +107,25 @@ function takeInput(position) {
 
     str = str + position
     if (arr[position] == "X" || arr[position] == "O") {
+        audioRight.currentTime = 0
+        audioWrong.play()
         document.getElementById('msg').innerHTML = "Already Filled...!"
         document.getElementById('msg').setAttribute("style", "top: 1vh;background-color: #FEC0C0;color: red;transition: 300ms")
 
     } else {
         if (turn % 2 == 0) {
+            audioRight.currentTime = 0
+            audioRight.play()
             document.getElementById(str).innerHTML = "X"
             arr[position] = 'X'
             win = 'X'
+            timer = tval
         } else {
+            audioRight.currentTime = 0
+            audioRight.play()
             document.getElementById(str).innerHTML = "O"
             arr[position] = 'O'
+            timer = tval
             win = 'O'
         }
         count++
@@ -86,23 +146,23 @@ function takeInput(position) {
         scoreboard(win)
         show_menu()
         rounds++
+
     }
     str = "c"
     console.log(count)
 }
 
 function show_menu() {
+    audioRound.currentTime = 0
+    audioRound.play()
+    runtimer = false
     document.getElementById('menu').setAttribute("style", "display: block")
     document.getElementById('backg').setAttribute("style", "display: block")
 
 }
 
-
-function cellCall() {
-    document.getElementsByTagName('td').setAttribute("style", "border: black dashed;font: 510% bold;transition: 150ms")
-}
-
 function show_score() {
+
     document.getElementById('rounds').innerHTML = "Rounds : " + rounds
     document.getElementById('p1').innerHTML = "Player O : " + p1
     document.getElementById('p2').innerHTML = "Player X: " + p2
@@ -123,7 +183,7 @@ function close_all() {
     document.getElementById('menu').setAttribute("style", "display: none")
     document.getElementById('backg').setAttribute("style", "display: none")
     document.getElementById('score').setAttribute("style", "display: none")
-
+    runtimer = true
 }
 
 
